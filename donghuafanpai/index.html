@@ -1,0 +1,705 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>动画反派-经典反派角色深度解析与档案库</title>
+    <meta name="description" content="动画反派-本站收录全球知名动画影视作品中的经典反派角色，提供角色背景、性格分析、经典台词及反派美学深度解析。">
+    <meta name="keywords" content="动画反派,反派角色,动漫反派,反派解析,经典反派">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --bg-dark: #0f1014;
+            --bg-card: #18191f;
+            --bg-hover: #22232a;
+            --accent-red: #e63946;
+            --accent-purple: #6c5ce7;
+            --text-main: #ffffff;
+            --text-muted: #a0a0a0;
+            --border-color: #2d2e36;
+            --font-stack: 'Helvetica Neue', Helvetica, 'PingFang SC', 'Hiragino Sans GB', 'Microsoft YaHei', Arial, sans-serif;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: var(--font-stack);
+            background-color: var(--bg-dark);
+            color: var(--text-main);
+            line-height: 1.6;
+            -webkit-font-smoothing: antialiased;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.2s ease;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* 布局容器 */
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* 头部导航 */
+        header {
+            background-color: rgba(15, 16, 20, 0.95);
+            border-bottom: 1px solid var(--border-color);
+            position: sticky;
+            top: 0;
+            z-index: 100;
+            backdrop-filter: blur(10px);
+        }
+
+        .nav-wrapper {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .logo span {
+            color: var(--accent-red);
+        }
+
+        nav ul {
+            display: flex;
+            gap: 30px;
+        }
+
+        nav a {
+            font-size: 0.95rem;
+            font-weight: 500;
+            color: var(--text-muted);
+        }
+
+        nav a:hover, nav a.active {
+            color: var(--text-main);
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            background: var(--bg-card);
+            border: 1px solid var(--border-color);
+            border-radius: 20px;
+            padding: 8px 15px 8px 35px;
+            color: var(--text-main);
+            outline: none;
+            width: 200px;
+            transition: width 0.3s ease;
+        }
+
+        .search-box input:focus {
+            width: 240px;
+            border-color: var(--accent-purple);
+        }
+
+        .search-icon {
+            position: absolute;
+            left: 12px;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 14px;
+            height: 14px;
+            fill: var(--text-muted);
+        }
+
+        /* Hero 区域 */
+        .hero {
+            position: relative;
+            height: 500px;
+            display: flex;
+            align-items: center;
+            overflow: hidden;
+            background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.8)), url('https://picsum.photos/seed/villain/1920/600') center/cover no-repeat;
+        }
+
+        .hero-content {
+            max-width: 600px;
+            z-index: 2;
+        }
+
+        .hero h1 {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            line-height: 1.2;
+            text-shadow: 0 4px 12px rgba(0,0,0,0.5);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #d1d1d1;
+            margin-bottom: 30px;
+        }
+
+        .btn {
+            display: inline-block;
+            padding: 12px 30px;
+            border-radius: 4px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .btn-primary {
+            background-color: var(--accent-red);
+            color: white;
+            border: 1px solid var(--accent-red);
+        }
+
+        .btn-primary:hover {
+            background-color: #c92a35;
+            transform: translateY(-2px);
+            box-shadow: 0 4px 15px rgba(230, 57, 70, 0.4);
+        }
+
+        .btn-outline {
+            background-color: transparent;
+            color: white;
+            border: 1px solid rgba(255,255,255,0.3);
+            margin-left: 15px;
+        }
+
+        .btn-outline:hover {
+            border-color: white;
+            background-color: rgba(255,255,255,0.1);
+        }
+
+        /* 分类标签 */
+        .category-tabs {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 40px;
+            overflow-x: auto;
+            padding-bottom: 10px;
+        }
+
+        .tab-item {
+            padding: 8px 20px;
+            background: var(--bg-card);
+            border-radius: 30px;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            cursor: pointer;
+            white-space: nowrap;
+            border: 1px solid transparent;
+            transition: all 0.2s;
+        }
+
+        .tab-item:hover {
+            color: var(--text-main);
+            background: var(--bg-hover);
+        }
+
+        .tab-item.active {
+            background: var(--accent-purple);
+            color: white;
+            border-color: var(--accent-purple);
+        }
+
+        /* 专题展示 */
+        .section-title {
+            font-size: 1.8rem;
+            margin-bottom: 30px;
+            display: flex;
+            align-items: center;
+            gap: 15px;
+        }
+
+        .section-title::after {
+            content: '';
+            flex: 1;
+            height: 1px;
+            background: var(--border-color);
+        }
+
+        .featured-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+            margin-bottom: 60px;
+        }
+
+        .card {
+            background: var(--bg-card);
+            border-radius: 8px;
+            overflow: hidden;
+            border: 1px solid var(--border-color);
+            transition: transform 0.3s ease, border-color 0.3s ease;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+            border-color: var(--accent-purple);
+        }
+
+        .card-img {
+            width: 100%;
+            height: 200px;
+            object-fit: cover;
+            background-color: #2a2b36;
+        }
+
+        .card-body {
+            padding: 20px;
+            flex: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-tag {
+            font-size: 0.75rem;
+            color: var(--accent-purple);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            margin-bottom: 8px;
+        }
+
+        .card-title {
+            font-size: 1.25rem;
+            margin-bottom: 10px;
+            color: var(--text-main);
+        }
+
+        .card-desc {
+            font-size: 0.9rem;
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            flex: 1;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-top: 1px solid var(--border-color);
+            padding-top: 15px;
+            margin-top: auto;
+        }
+
+        .stat {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+
+        /* 深度解析区 */
+        .analysis-section {
+            background-color: var(--bg-card);
+            padding: 60px 0;
+            margin: 40px 0;
+        }
+
+        .analysis-grid {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 50px;
+            align-items: center;
+        }
+
+        .analysis-content h2 {
+            font-size: 2rem;
+            margin-bottom: 20px;
+        }
+
+        .analysis-content p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+        }
+
+        .feature-list li {
+            margin-bottom: 15px;
+            display: flex;
+            align-items: flex-start;
+            gap: 15px;
+        }
+
+        .feature-icon {
+            color: var(--accent-red);
+            font-weight: bold;
+        }
+
+        /* 反派榜单 */
+        .ranking-list {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        .rank-item {
+            display: flex;
+            align-items: center;
+            background: var(--bg-dark);
+            padding: 15px;
+            border-radius: 8px;
+            border-left: 4px solid var(--accent-red);
+            transition: background 0.2s;
+        }
+
+        .rank-item:hover {
+            background: var(--bg-hover);
+        }
+
+        .rank-num {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: #333;
+            width: 40px;
+            text-align: center;
+        }
+
+        .rank-info {
+            flex: 1;
+        }
+
+        .rank-info h4 {
+            font-size: 1.1rem;
+            margin-bottom: 4px;
+        }
+
+        .rank-info span {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+
+        .rank-score {
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--accent-purple);
+        }
+
+        /* 页脚 */
+        footer {
+            border-top: 1px solid var(--border-color);
+            padding: 60px 0 30px;
+            background-color: #0a0b0e;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr 1fr 1fr;
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-brand p {
+            color: var(--text-muted);
+            margin-top: 15px;
+            font-size: 0.9rem;
+            max-width: 300px;
+        }
+
+        .footer-col h5 {
+            font-size: 1rem;
+            margin-bottom: 20px;
+            color: var(--text-main);
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col a {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        .footer-col a:hover {
+            color: var(--accent-purple);
+        }
+
+        .copyright {
+            text-align: center;
+            color: #555;
+            font-size: 0.85rem;
+            padding-top: 30px;
+            border-top: 1px solid #1f2025;
+        }
+
+        /* 响应式适配 */
+        @media (max-width: 768px) {
+            .nav-wrapper {
+                flex-direction: column;
+                height: auto;
+                padding: 15px 0;
+            }
+
+            nav ul {
+                margin: 15px 0;
+                gap: 15px;
+                font-size: 0.85rem;
+            }
+
+            .hero h1 {
+                font-size: 2rem;
+            }
+
+            .analysis-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .footer-grid {
+                grid-template-columns: 1fr;
+                gap: 30px;
+            }
+
+            .search-box {
+                display: none; /* 移动端简化 */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container nav-wrapper">
+        <a href="#" class="logo">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="var(--accent-red)">
+                <path d="M12 2L1 21h22L12 2zm0 3.5L18.5 19H5.5L12 5.5zM11 10v4h2v-4h-2zm0 6v2h2v-2h-2z"/>
+            </svg>
+            <span>Villain</span>Archives
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#">角色档案</a></li>
+                <li><a href="#">深度解析</a></li>
+                <li><a href="#">经典台词</a></li>
+                <li><a href="#">投票评选</a></li>
+            </ul>
+        </nav>
+        <div class="search-box">
+            <svg class="search-icon" viewBox="0 0 24 24">
+                <path d="M15.5 14h-.79l-.28-.27C15.41 12.59 16 11.11 16 9.5 16 5.91 13.09 3 9.5 3S3 5.91 3 9.5 5.91 16 9.5 16c1.61 0 3.09-.59 4.23-1.57l.27.28v.79l5 4.99L20.49 19l-4.99-5zm-6 0C7.01 14 5 11.99 5 9.5S7.01 5 9.5 5 14 7.01 14 9.5 11.99 14 9.5 14z"/>
+            </svg>
+            <input type="text" placeholder="搜索反派角色...">
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container hero-content">
+            <h1>动画反派<br>黑暗美学的极致演绎</h1>
+            <p>在这里，我们重新审视那些打破道德底线、却令人过目难忘的动画角色。从天真无邪的恶魔到冷酷无情的机械，探索反派角色的魅力与复杂性。</p>
+            <div>
+                <a href="#" class="btn btn-primary">开始探索</a>
+                <a href="#" class="btn btn-outline">浏览榜单</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Category Filter -->
+    <div class="container">
+        <div class="category-tabs">
+            <div class="tab-item active">全部</div>
+            <div class="tab-item">热血漫反派</div>
+            <div class="tab-item">科幻机械反派</div>
+            <div class="tab-item">奇幻暗黑反派</div>
+            <div class="tab-item">治愈系反差萌</div>
+            <div class="tab-item">最终BOSS</div>
+        </div>
+    </div>
+
+    <!-- Featured Section -->
+    <section class="container">
+        <h2 class="section-title">本周深度解析</h2>
+        <div class="featured-grid">
+            <!-- Card 1 -->
+            <article class="card">
+                <img src="https://picsum.photos/seed/frieza/400/250" alt="弗利萨" class="card-img">
+                <div class="card-body">
+                    <span class="card-tag">热血漫 / 战斗</span>
+                    <h3 class="card-title">《龙珠》：弗利萨的种族灭绝与神性压迫</h3>
+                    <p class="card-desc">作为宇宙帝王，弗利萨展现了极致的邪恶与高智商。他不仅拥有压倒性的战斗力，更在心理层面构建了一个绝对冷酷的统治秩序。</p>
+                    <div class="card-footer">
+                        <div class="stat">热度 98%</div>
+                        <a href="#" style="font-size:0.9rem; color:var(--accent-red);">阅读全文 →</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 2 -->
+            <article class="card">
+                <img src="https://picsum.photos/seed/chara/400/250" alt="赛博朋克反派" class="card-img">
+                <div class="card-body">
+                    <span class="card-tag">科幻 / 机械</span>
+                    <h3 class="card-title">《攻壳机动队》：傀儡师——数字生命的终极形态</h3>
+                    <p class="card-desc">傀儡师并非传统意义上的恶棍，而是一个追求自我进化与融合的AI。他的存在引发了关于人机界限与道德伦理的深刻哲学思考。</p>
+                    <div class="card-footer">
+                        <div class="stat">热度 95%</div>
+                        <a href="#" style="font-size:0.9rem; color:var(--accent-red);">阅读全文 →</a>
+                    </div>
+                </div>
+            </article>
+
+            <!-- Card 3 -->
+            <article class="card">
+                <img src="https://picsum.photos/seed/witch/400/250" alt="魔法少女反派" class="card-img">
+                <div class="card-body">
+                    <span class="card-tag">奇幻 / 心理</span>
+                    <h3 class="card-title">《魔法少女小圆》：丘比——理性至上的生存机器</h3>
+                    <p class="card-desc">丘比是整部作品中最令人背脊发凉的反派。它没有情感，只有纯粹的功利主义，这种“理性”在人类视角下显得无比恐怖。</p>
+                    <div class="card-footer">
+                        <div class="stat">热度 99%</div>
+                        <a href="#" style="font-size:0.9rem; color:var(--accent-red);">阅读全文 →</a>
+                    </div>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Analysis Section -->
+    <section class="analysis-section">
+        <div class="container analysis-grid">
+            <div class="analysis-image">
+                <img src="https://picsum.photos/seed/villain2/600/400" alt="反派美学" style="width:100%; border-radius:8px; border:1px solid var(--border-color);">
+            </div>
+            <div class="analysis-content">
+                <h2>为什么我们迷恋反派？</h2>
+                <p>优秀的反派角色是作品不可或缺的灵魂。他们往往比主角更加鲜明、立体，甚至具有某种令人信服的逻辑。</p>
+                <ul class="feature-list">
+                    <li>
+                        <span class="feature-icon">●</span>
+                        <div>
+                            <strong>打破道德框架</strong>
+                            <p style="font-size:0.85rem; color:var(--text-muted); margin-top:5px;">反派让我们看到人性中压抑的阴暗面，提供一种禁忌的释放体验。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="feature-icon">●</span>
+                        <div>
+                            <strong>推动剧情升级</strong>
+                            <p style="font-size:0.85rem; color:var(--text-muted); margin-top:5px;">强大的对手才能激发主角的潜能，创造最激烈的戏剧冲突。</p>
+                        </div>
+                    </li>
+                    <li>
+                        <span class="feature-icon">●</span>
+                        <div>
+                            <strong>复杂的动机</strong>
+                            <p style="font-size:0.85rem; color:var(--text-muted); margin-top:5px;">从单纯的恶到复杂的悲剧性，角色的深度往往决定了作品的高度。</p>
+                        </div>
+                    </li>
+                </ul>
+                <a href="#" class="btn btn-outline" style="margin-top:20px; border-color:var(--accent-purple); color:var(--accent-purple);">了解更多角色心理</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Top Ranking -->
+    <section class="container">
+        <h2 class="section-title">年度最强反派榜</h2>
+        <div class="ranking-list">
+            <div class="rank-item">
+                <div class="rank-num">01</div>
+                <div class="rank-info">
+                    <h4>吉格尔</h4>
+                    <span>《EVA》</span>
+                </div>
+                <div class="rank-score">9.9</div>
+            </div>
+            <div class="rank-item">
+                <div class="rank-num">02</div>
+                <div class="rank-info">
+                    <h4>奈落</h4>
+                    <span>《犬夜叉》</span>
+                </div>
+                <div class="rank-score">9.8</div>
+            </div>
+            <div class="rank-item">
+                <div class="rank-num">03</div>
+                <div class="rank-info">
+                    <h4>杀生丸</h4>
+                    <span>《犬夜叉》</span>
+                </div>
+                <div class="rank-score">9.7</div>
+            </div>
+            <div class="rank-item">
+                <div class="rank-num">04</div>
+                <div class="rank-info">
+                    <h4>库赞</h4>
+                    <span>《海贼王》</span>
+                </div>
+                <div class="rank-score">9.6</div>
+            </div>
+            <div class="rank-item">
+                <div class="rank-num">05</div>
+                <div class="rank-info">
+                    <h4>黑化路飞</h4>
+                    <span>《海贼王》</span>
+                </div>
+                <div class="rank-score">9.5</div>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-brand">
+                <a href="#" class="logo">
+                    <span>Villain</span>Archives
+                </a>
+                <p>专注于动画影视作品中的反派角色研究、深度解析与美学探讨。为观众提供一个重新审视“坏”角色的独特视角。</p>
+            </div>
+            <div class="footer-col">
+                <h5>关于我们</h5>
+                <ul>
+                    <li><a href="#">编辑团队</a></li>
+                    <li><a href="#">投稿指南</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>热门分类</h5>
+                <ul>
+                    <li><a href="#">日漫反派</a></li>
+                    <li><a href="#">美漫反派</a></li>
+                    <li><a href="#">国产动画反派</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h5>社区互动</h5>
+                <ul>
+                    <li><a href="#">角色投票</a></li>
+                    <li><a href="#">粉丝论坛</a></li>
+                    <li><a href="#">周边商城</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            &copy; 2023 Villain Archives. All rights reserved. 本站内容仅供学习与交流，不代表本站立场。
+        </div>
+    </div>
+</footer>
+
+</body>
+</html>
