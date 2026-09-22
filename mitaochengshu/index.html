@@ -1,0 +1,709 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>蜜桃成熟了-热门言情小说与都市情感故事在线阅读平台</title>
+    <meta name="description" content="蜜桃成熟了平台提供最新、最热的言情小说及都市情感故事。涵盖甜宠、虐恋、职场等多元题材，海量免费在线阅读，满足你对美好爱情的全部幻想。">
+    <meta name="keywords" content="蜜桃成熟了,言情小说,在线阅读,都市情感,甜宠文">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #ff6b81;
+            --secondary-color: #ff4757;
+            --accent-color: #ffa502;
+            --bg-color: #f1f2f6;
+            --card-bg: #ffffff;
+            --text-main: #2f3542;
+            --text-light: #747d8c;
+            --nav-height: 70px;
+            --radius: 12px;
+            --shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding-top: var(--nav-height);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Navigation */
+        .navbar {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--nav-height);
+            background: rgba(255, 255, 255, 0.95);
+            backdrop-filter: blur(10px);
+            box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+            z-index: 1000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .nav-container {
+            width: 90%;
+            max-width: 1200px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: 800;
+            color: var(--secondary-color);
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .logo span {
+            color: var(--primary-color);
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 30px;
+        }
+
+        .nav-links a {
+            font-weight: 500;
+            font-size: 1rem;
+            color: var(--text-main);
+        }
+
+        .nav-links a:hover, .nav-links a.active {
+            color: var(--primary-color);
+        }
+
+        .search-box {
+            position: relative;
+        }
+
+        .search-box input {
+            padding: 8px 15px;
+            border-radius: 20px;
+            border: 1px solid #e1e1e1;
+            background: #f8f9fa;
+            outline: none;
+            font-size: 0.9rem;
+            width: 200px;
+            transition: width 0.3s, background 0.3s;
+        }
+
+        .search-box input:focus {
+            width: 260px;
+            background: #fff;
+            border-color: var(--primary-color);
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(135deg, #fff0f3 0%, #ffe3e6 100%);
+            padding: 60px 20px;
+            text-align: center;
+        }
+
+        .hero-content {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 15px;
+            color: var(--secondary-color);
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: var(--text-light);
+            margin-bottom: 30px;
+        }
+
+        .cta-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .btn {
+            padding: 10px 25px;
+            border-radius: 25px;
+            font-weight: 600;
+            cursor: pointer;
+            transition: transform 0.2s, box-shadow 0.2s;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background-color: var(--primary-color);
+            color: white;
+            box-shadow: 0 4px 15px rgba(255, 107, 129, 0.4);
+        }
+
+        .btn-secondary {
+            background-color: white;
+            color: var(--text-main);
+            border: 1px solid #ddd;
+        }
+
+        .btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+        }
+
+        /* Layout Container */
+        .container {
+            width: 90%;
+            max-width: 1200px;
+            margin: 40px auto;
+        }
+
+        /* Section Headers */
+        .section-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+            margin-bottom: 25px;
+            border-left: 5px solid var(--primary-color);
+            padding-left: 15px;
+        }
+
+        .section-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--text-main);
+        }
+
+        .section-more {
+            font-size: 0.9rem;
+            color: var(--text-light);
+        }
+
+        /* Grid Layouts */
+        .grid-layout {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(180px, 1fr));
+            gap: 20px;
+        }
+
+        .card {
+            background: var(--card-bg);
+            border-radius: var(--radius);
+            overflow: hidden;
+            box-shadow: var(--shadow);
+            transition: transform 0.3s;
+            position: relative;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card-cover {
+            width: 100%;
+            height: 240px;
+            object-fit: cover;
+            background-color: #eee;
+        }
+
+        .card-body {
+            padding: 15px;
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-title {
+            font-size: 1.05rem;
+            font-weight: 700;
+            margin-bottom: 8px;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            line-height: 1.4;
+        }
+
+        .card-meta {
+            font-size: 0.8rem;
+            color: var(--text-light);
+            margin-bottom: 10px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .card-tags span {
+            background: #fff0f3;
+            color: var(--secondary-color);
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 0.75rem;
+        }
+
+        /* Featured Section */
+        .featured-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 20px;
+            margin-bottom: 40px;
+        }
+
+        .featured-card {
+            grid-column: span 2;
+            height: 350px;
+        }
+
+        .featured-card .card-cover {
+            height: 100%;
+        }
+
+        .featured-info {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            background: linear-gradient(to top, rgba(0,0,0,0.9), transparent);
+            padding: 30px 20px;
+            color: white;
+        }
+
+        .featured-info h2 {
+            font-size: 1.8rem;
+            margin-bottom: 10px;
+        }
+
+        .featured-info p {
+            opacity: 0.9;
+            font-size: 0.95rem;
+        }
+
+        /* Sidebar */
+        .sidebar {
+            background: white;
+            padding: 20px;
+            border-radius: var(--radius);
+            box-shadow: var(--shadow);
+            height: fit-content;
+        }
+
+        .sidebar h3 {
+            margin-bottom: 15px;
+            font-size: 1.2rem;
+            border-bottom: 2px solid #f1f2f6;
+            padding-bottom: 10px;
+        }
+
+        .rank-list li {
+            display: flex;
+            align-items: center;
+            padding: 10px 0;
+            border-bottom: 1px dashed #eee;
+        }
+
+        .rank-num {
+            font-size: 1.2rem;
+            font-weight: bold;
+            color: #ccc;
+            width: 25px;
+        }
+
+        .rank-num.top-1 { color: #ff4757; font-size: 1.5rem; }
+        .rank-num.top-2 { color: #ffa502; font-size: 1.4rem; }
+        .rank-num.top-3 { color: #eccc68; font-size: 1.3rem; }
+
+        .rank-title {
+            flex-grow: 1;
+            font-size: 0.95rem;
+            font-weight: 500;
+        }
+
+        /* Categories */
+        .category-nav {
+            display: flex;
+            gap: 15px;
+            margin-bottom: 30px;
+            flex-wrap: wrap;
+        }
+
+        .cat-btn {
+            padding: 8px 20px;
+            background: white;
+            border-radius: 30px;
+            border: 1px solid #eee;
+            color: var(--text-light);
+            font-size: 0.9rem;
+            transition: all 0.2s;
+        }
+
+        .cat-btn:hover, .cat-btn.active {
+            background: var(--primary-color);
+            color: white;
+            border-color: var(--primary-color);
+        }
+
+        /* Footer */
+        footer {
+            background: #2f3542;
+            color: #dfe4ea;
+            padding: 50px 20px 20px;
+            margin-top: 60px;
+        }
+
+        .footer-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 40px;
+            margin-bottom: 40px;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 20px;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 10px;
+        }
+
+        .footer-col ul li a:hover {
+            color: var(--primary-color);
+        }
+
+        .footer-bottom {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 20px;
+            font-size: 0.85rem;
+            color: #747d8c;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .nav-links {
+                display: none;
+            }
+            
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+
+            .featured-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .featured-card {
+                grid-column: span 1;
+            }
+
+            .search-box input {
+                width: 120px;
+            }
+
+            .search-box input:focus {
+                width: 160px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 导航栏 -->
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor">
+                    <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-1 17.93c-3.95-.49-7-3.85-7-7.93 0-.62.08-1.21.21-1.79L9 15v1c0 1.1.9 2 2 2v1.93zm6.9-2.54c-.26-.81-1-1.39-1.9-1.39h-1v-3c0-.55-.45-1-1-1H8v-2h2c.55 0 1-.45 1-1V7h2c1.1 0 2-.9 2-2v-.41c2.93 1.19 5 4.06 5 7.41 0 2.08-.8 3.97-2.1 5.39z"/>
+                </svg>
+                <span>蜜桃</span>成熟了
+            </a>
+            <nav class="nav-links">
+                <a href="#" class="active">首页</a>
+                <a href="#">全部小说</a>
+                <a href="#">最新更新</a>
+                <a href="#">排行榜</a>
+                <a href="#">我的书架</a>
+            </nav>
+            <div class="search-box">
+                <input type="text" placeholder="搜索小说或作者...">
+            </div>
+        </div>
+    </header>
+
+    <!-- 首屏 Hero -->
+    <section class="hero">
+        <div class="hero-content">
+            <h1>探索都市情感的极致浪漫</h1>
+            <p>在“蜜桃成熟了”发现那些触动心弦的故事。从甜蜜校园到职场博弈，我们为你精选最值得阅读的言情小说。</p>
+            <div class="cta-buttons">
+                <a href="#" class="btn btn-primary">开始阅读</a>
+                <a href="#" class="btn btn-secondary">加入书架</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- 主体内容 -->
+    <main class="container">
+        
+        <!-- 分类导航 -->
+        <nav class="category-nav">
+            <a href="#" class="cat-btn active">推荐</a>
+            <a href="#" class="cat-btn">甜宠文</a>
+            <a href="#" class="cat-btn">都市言情</a>
+            <a href="#" class="cat-btn">古风</a>
+            <a href="#" class="cat-btn">豪门</a>
+            <a href="#" class="cat-btn">悬疑</a>
+            <a href="#" class="cat-btn">总裁文</a>
+        </nav>
+
+        <!-- 热门推荐 -->
+        <section>
+            <div class="section-header">
+                <h2 class="section-title">今日热门推荐</h2>
+                <a href="#" class="section-more">查看更多 ></a>
+            </div>
+            
+            <div class="featured-grid">
+                <article class="card featured-card">
+                    <img src="https://picsum.photos/seed/romance1/800/400" alt="小说封面" class="card-cover">
+                    <div class="featured-info">
+                        <h2>蜜糖陷阱：总裁的独宠娇妻</h2>
+                        <p>一场精心设计的相遇，让他沦陷在温柔乡里。当谎言被拆穿，她还能全身而退吗？</p>
+                        <div style="margin-top: 15px;">
+                            <span class="btn btn-primary" style="padding: 5px 15px; font-size: 0.8rem;">立即阅读</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/romance2/400/300" alt="小说封面" class="card-cover">
+                    <div class="card-body">
+                        <h3 class="card-title">薄荷味的初恋时光</h3>
+                        <div class="card-meta">
+                            <span>校园</span>
+                            <span>连载中</span>
+                        </div>
+                        <div class="card-tags">
+                            <span>甜宠</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/romance3/400/300" alt="小说封面" class="card-cover">
+                    <div class="card-body">
+                        <h3 class="card-title">夜色微凉：归途</h3>
+                        <div class="card-meta">
+                            <span>悬疑</span>
+                            <span>已完结</span>
+                        </div>
+                        <div class="card-tags">
+                            <span>推理</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 热门榜单 -->
+        <section>
+            <div class="section-header">
+                <h2 class="section-title">本周人气榜单</h2>
+                <a href="#" class="section-more">完整榜单 ></a>
+            </div>
+            <div class="grid-layout">
+                <article class="card">
+                    <img src="https://picsum.photos/seed/romance4/400/300" alt="小说封面" class="card-cover">
+                    <div class="card-body">
+                        <h3 class="card-title">失忆后的他对我死缠烂打</h3>
+                        <div class="card-meta">
+                            <span>都市</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/romance5/400/300" alt="小说封面" class="card-cover">
+                    <div class="card-body">
+                        <h3 class="card-title">豪门千金逆袭记</h3>
+                        <div class="card-meta">
+                            <span>逆袭</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/romance6/400/300" alt="小说封面" class="card-cover">
+                    <div class="card-body">
+                        <h3 class="card-title">他在逆光中走来</h3>
+                        <div class="card-meta">
+                            <span>青春</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/romance7/400/300" alt="小说封面" class="card-cover">
+                    <div class="card-body">
+                        <h3 class="card-title">原来你也在这里</h3>
+                        <div class="card-meta">
+                            <span>治愈</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/romance8/400/300" alt="小说封面" class="card-cover">
+                    <div class="card-body">
+                        <h3 class="card-title">独家占有欲</h3>
+                        <div class="card-meta">
+                            <span>总裁</span>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="https://picsum.photos/seed/romance9/400/300" alt="小说封面" class="card-cover">
+                    <div class="card-body">
+                        <h3 class="card-title">如果月亮不抱你</h3>
+                        <div class="card-meta">
+                            <span>现代</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+
+        <!-- 侧边栏布局：分类浏览 + 作者推荐 -->
+        <div style="display: grid; grid-template-columns: 3fr 1fr; gap: 30px; margin-top: 40px;">
+            
+            <!-- 最新更新 -->
+            <section>
+                <div class="section-header">
+                    <h2 class="section-title">最新更新</h2>
+                </div>
+                <div style="background: white; border-radius: var(--radius); box-shadow: var(--shadow);">
+                    <ul class="rank-list" style="padding: 0;">
+                        <li>
+                            <a href="#" class="rank-title">第1024章：婚礼的钟声敲响</a>
+                            <span class="card-meta">更新于 10分钟前</span>
+                        </li>
+                        <li>
+                            <a href="#" class="rank-title">第45章：雨夜的告白</a>
+                            <span class="card-meta">更新于 30分钟前</span>
+                        </li>
+                        <li>
+                            <a href="#" class="rank-title">第89章：误会解除</a>
+                            <span class="card-meta">更新于 1小时前</span>
+                        </li>
+                        <li>
+                            <a href="#" class="rank-title">第12章：初入职场</a>
+                            <span class="card-meta">更新于 2小时前</span>
+                        </li>
+                        <li>
+                            <a href="#" class="rank-title">第205章：真相大白</a>
+                            <span class="card-meta">更新于 3小时前</span>
+                        </li>
+                    </ul>
+                </div>
+            </section>
+
+            <!-- 侧边栏：排行榜 -->
+            <aside>
+                <div class="sidebar">
+                    <h3>人气飙升榜</h3>
+                    <ul class="rank-list">
+                        <li>
+                            <span class="rank-num top-1">1</span>
+                            <a href="#" class="rank-title">蜜桃成熟了</a>
+                        </li>
+                        <li>
+                            <span class="rank-num top-2">2</span>
+                            <a href="#" class="rank-title">独家宠爱</a>
+                        </li>
+                        <li>
+                            <span class="rank-num top-3">3</span>
+                            <a href="#" class="rank-title">独家占有</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">4</span>
+                            <a href="#" class="rank-title">甜心蜜意</a>
+                        </li>
+                        <li>
+                            <span class="rank-num">5</span>
+                            <a href="#" class="rank-title">蜜恋成婚</a>
+                        </li>
+                    </ul>
+                </div>
+            </aside>
+
+        </div>
+
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        <div class="footer-content">
+            <div class="footer-col">
+                <div class="logo" style="color: white; margin-bottom: 15px;">
+                    <span>蜜桃</span>成熟了
+                </div>
+                <p style="font-size: 0.9rem; color: #a4b0be; line-height: 1.8;">
+                    致力于为读者提供最优质的阅读体验。这里有最热门的都市言情小说，最动人的情感故事，陪伴你的每一个阅读时刻。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>网站导航</h4>
+                <ul>
+                    <li><a href="#">首页</a></li>
+                    <li><a href="#">分类浏览</a></li>
+                    <li><a href="#">排行榜单</a></li>
+                    <li><a href="#">书架管理</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>热门分类</h4>
+                <ul>
+                    <li><a href="#">都市言情</a></li>
+                    <li><a href="#">校园青春</a></li>
+                    <li><a href="#">豪门总裁</a></li>
+                    <li><a href="#">古风穿越</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <ul>
+                    <li><a href="#">用户协议</a></li>
+                    <li><a href="#">隐私政策</a></li>
+                    <li><a href="#">侵权投诉</a></li>
+                    <li><a href="#">联系客服</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2023 蜜桃成熟了阅读网 版权所有 | 本站内容均来自互联网，仅供学习交流使用</p>
+        </div>
+    </footer>
+
+</body>
+  </html>
