@@ -1,0 +1,653 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>中国茶叶品牌-专业茶叶品牌推荐与选购指南</title>
+    <meta name="description" content="本站汇集中国知名茶叶品牌信息，提供西湖龙井、普洱茶、大红袍、铁观音等名优茶的品牌对比、品质评测及选购建议，助您找到正宗好茶。">
+    <meta name="keywords" content="中国茶叶品牌, 茶叶品牌推荐, 西湖龙井, 普洱茶, 大红袍, 铁观音, 茶叶选购">
+    <script type="text/javascript" src="https://cdn.bdwgg.com/mh.js"></script>
+    <style>
+        :root {
+            --primary-color: #4e342e;
+            --secondary-color: #795548;
+            --accent-color: #d7ccc8;
+            --bg-color: #fafafa;
+            --text-color: #333333;
+            --light-text: #666666;
+            --card-bg: #ffffff;
+            --border-radius: 8px;
+            --spacing-unit: 1rem;
+            --container-width: 1200px;
+        }
+
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif;
+            line-height: 1.6;
+            color: var(--text-color);
+            background-color: var(--bg-color);
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+            transition: color 0.3s;
+        }
+
+        ul {
+            list-style: none;
+        }
+
+        /* Utility Classes */
+        .container {
+            max-width: var(--container-width);
+            margin: 0 auto;
+            padding: 0 var(--spacing-unit);
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 2rem;
+        }
+
+        .section-title h2 {
+            font-size: 2rem;
+            color: var(--primary-color);
+            margin-bottom: 0.5rem;
+        }
+
+        .section-title p {
+            color: var(--light-text);
+        }
+
+        /* Header */
+        header {
+            background-color: var(--primary-color);
+            color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .header-inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            height: 70px;
+        }
+
+        .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+
+        .logo span {
+            color: #c5e1a5;
+        }
+
+        nav ul {
+            display: flex;
+            gap: 1.5rem;
+        }
+
+        nav a {
+            font-size: 1rem;
+            opacity: 0.9;
+        }
+
+        nav a:hover, nav a.active {
+            opacity: 1;
+            color: #c5e1a5;
+        }
+
+        .header-actions {
+            display: flex;
+            gap: 1rem;
+        }
+
+        .btn-outline {
+            border: 1px solid rgba(255,255,255,0.3);
+            padding: 0.4rem 1rem;
+            border-radius: 4px;
+            font-size: 0.9rem;
+        }
+
+        .btn-primary {
+            background-color: #c5e1a5;
+            color: var(--primary-color);
+            padding: 0.4rem 1rem;
+            border-radius: 4px;
+            font-weight: bold;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(78, 52, 46, 0.7), rgba(78, 52, 46, 0.7)), url('https://picsum.photos/seed/tea-hero/1600/600') center/cover;
+            color: white;
+            padding: 4rem 0;
+            text-align: center;
+        }
+
+        .hero h1 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            max-width: 700px;
+            margin: 0 auto 2rem;
+            opacity: 0.9;
+        }
+
+        .search-bar {
+            max-width: 500px;
+            margin: 0 auto;
+            display: flex;
+        }
+
+        .search-bar input {
+            flex: 1;
+            padding: 0.8rem;
+            border: none;
+            border-radius: 4px 0 0 4px;
+            outline: none;
+        }
+
+        .search-bar button {
+            padding: 0 1.5rem;
+            background-color: var(--secondary-color);
+            color: white;
+            border: none;
+            border-radius: 0 4px 4px 0;
+            cursor: pointer;
+            font-size: 1rem;
+        }
+
+        /* Categories */
+        .categories {
+            padding: 3rem 0;
+        }
+
+        .category-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+            gap: 1.5rem;
+        }
+
+        .category-card {
+            background: var(--card-bg);
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            padding: 1.5rem;
+            text-align: center;
+            transition: transform 0.3s, box-shadow 0.3s;
+            cursor: pointer;
+        }
+
+        .category-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 5px 15px rgba(0,0,0,0.05);
+            border-color: var(--secondary-color);
+        }
+
+        .category-icon {
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            display: block;
+        }
+
+        .category-card h3 {
+            font-size: 1.1rem;
+            color: var(--primary-color);
+        }
+
+        /* Featured Brands */
+        .featured {
+            padding: 3rem 0;
+            background-color: white;
+        }
+
+        .brand-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .brand-card {
+            border: 1px solid #eee;
+            border-radius: var(--border-radius);
+            overflow: hidden;
+            transition: box-shadow 0.3s;
+        }
+
+        .brand-card:hover {
+            box-shadow: 0 10px 20px rgba(0,0,0,0.08);
+        }
+
+        .brand-img {
+            width: 100%;
+            height: 180px;
+            background-color: #eee;
+            object-fit: cover;
+        }
+
+        .brand-info {
+            padding: 1.5rem;
+        }
+
+        .brand-info h3 {
+            font-size: 1.25rem;
+            margin-bottom: 0.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .brand-tag {
+            font-size: 0.75rem;
+            background-color: var(--accent-color);
+            color: var(--primary-color);
+            padding: 0.2rem 0.5rem;
+            border-radius: 10px;
+        }
+
+        .brand-info p {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            margin-bottom: 1rem;
+        }
+
+        .brand-features {
+            display: flex;
+            gap: 0.5rem;
+            flex-wrap: wrap;
+        }
+
+        .feature-tag {
+            font-size: 0.8rem;
+            color: var(--secondary-color);
+            border: 1px solid var(--secondary-color);
+            padding: 2px 8px;
+            border-radius: 4px;
+        }
+
+        /* Buying Guide */
+        .guide {
+            padding: 3rem 0;
+        }
+
+        .guide-layout {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 2rem;
+        }
+
+        .guide-article {
+            background: var(--card-bg);
+            padding: 2rem;
+            border-radius: var(--border-radius);
+            box-shadow: 0 2px 8px rgba(0,0,0,0.03);
+        }
+
+        .guide-article h3 {
+            font-size: 1.4rem;
+            margin-bottom: 1rem;
+            border-left: 4px solid var(--secondary-color);
+            padding-left: 1rem;
+        }
+
+        .guide-list li {
+            margin-bottom: 1rem;
+            padding-left: 1.5rem;
+            position: relative;
+        }
+
+        .guide-list li::before {
+            content: "•";
+            color: var(--secondary-color);
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+
+        .guide-sidebar {
+            background: var(--card-bg);
+            padding: 1.5rem;
+            border-radius: var(--border-radius);
+            border: 1px solid #eee;
+            height: fit-content;
+        }
+
+        .guide-sidebar h4 {
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .faq-item {
+            border-bottom: 1px solid #eee;
+            padding: 1rem 0;
+        }
+
+        .faq-item:last-child {
+            border-bottom: none;
+        }
+
+        .faq-question {
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+            display: block;
+            cursor: pointer;
+        }
+
+        .faq-answer {
+            font-size: 0.9rem;
+            color: var(--light-text);
+            display: none;
+        }
+
+        .faq-item.active .faq-answer {
+            display: block;
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--primary-color);
+            color: #c5e1a5;
+            padding: 3rem 0 1rem;
+            margin-top: 3rem;
+        }
+
+        .footer-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 2rem;
+            margin-bottom: 2rem;
+        }
+
+        .footer-col h4 {
+            color: white;
+            margin-bottom: 1rem;
+            font-size: 1.1rem;
+        }
+
+        .footer-col ul li {
+            margin-bottom: 0.5rem;
+        }
+
+        .footer-col a {
+            color: #c5e1a5;
+            opacity: 0.8;
+        }
+
+        .footer-col a:hover {
+            opacity: 1;
+            text-decoration: underline;
+        }
+
+        .copyright {
+            text-align: center;
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+            font-size: 0.85rem;
+            opacity: 0.7;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .header-inner {
+                flex-direction: column;
+                height: auto;
+                padding: 1rem 0;
+            }
+
+            nav ul {
+                margin: 1rem 0;
+                flex-wrap: wrap;
+                justify-content: center;
+            }
+
+            .guide-layout {
+                grid-template-columns: 1fr;
+            }
+
+            .hero h1 {
+                font-size: 1.8rem;
+            }
+        }
+    </style>
+</head>
+<body>
+
+<header>
+    <div class="container header-inner">
+        <a href="#" class="logo">
+            <span>🍵</span> 中国茶叶品牌指南
+        </a>
+        <nav>
+            <ul>
+                <li><a href="#" class="active">首页</a></li>
+                <li><a href="#categories">茶叶分类</a></li>
+                <li><a href="#brands">品牌推荐</a></li>
+                <li><a href="#guide">选购指南</a></li>
+                <li><a href="#faq">常见问题</a></li>
+            </ul>
+        </nav>
+        <div class="header-actions">
+            <a href="#" class="btn-outline">登录</a>
+            <a href="#" class="btn-primary">注册会员</a>
+        </div>
+    </div>
+</header>
+
+<main>
+    <!-- Hero Section -->
+    <section class="hero">
+        <div class="container">
+            <h1>探索中国茶叶品牌</h1>
+            <p>从西湖龙井到武夷大红袍，为您甄选国内优质茶叶品牌，提供专业的产地溯源与品质评测，助您轻松找到心头好茶。</p>
+            <div class="search-bar">
+                <input type="text" placeholder="搜索茶叶品牌、茶类或产地...">
+                <button>搜索</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Categories Section -->
+    <section id="categories" class="categories container">
+        <div class="section-title">
+            <h2>热门茶类推荐</h2>
+            <p>根据您的口味偏好，探索不同种类的中国名茶</p>
+        </div>
+        <div class="category-grid">
+            <div class="category-card">
+                <span class="category-icon">🍃</span>
+                <h3>绿茶</h3>
+                <p style="font-size: 0.85rem; color: #666; margin-top:0.5rem;">清新爽口，代表品牌：西湖龙井、碧螺春</p>
+            </div>
+            <div class="category-card">
+                <span class="category-icon">🍂</span>
+                <h3>红茶</h3>
+                <p style="font-size: 0.85rem; color: #666; margin-top:0.5rem;">温润养胃，代表品牌：正山小种、祁门红茶</p>
+            </div>
+            <div class="category-card">
+                <span class="category-icon">🍵</span>
+                <h3>乌龙茶</h3>
+                <p style="font-size: 0.85rem; color: #666; margin-top:0.5rem;">香气高扬，代表品牌：铁观音、大红袍</p>
+            </div>
+            <div class="category-card">
+                <span class="category-icon">🥃</span>
+                <h3>普洱茶</h3>
+                <p style="font-size: 0.85rem; color: #666; margin-top:0.5rem;">越陈越香，代表品牌：大益、下关沱茶</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Brands Section -->
+    <section id="brands" class="featured">
+        <div class="container">
+            <div class="section-title">
+                <h2>知名中国茶叶品牌</h2>
+                <p>行业领军企业，品质与信誉的双重保障</p>
+            </div>
+            <div class="brand-grid">
+                <!-- Brand 1 -->
+                <article class="brand-card">
+                    <img src="https://picsum.photos/seed/teabrand1/400/300" alt="大益茶" class="brand-img">
+                    <div class="brand-info">
+                        <h3>大益茶 <span class="brand-tag">国礼级</span></h3>
+                        <p>中国普洱茶行业的标杆品牌，拥有完整产业链体系，以勐海茶厂为核心，是普洱茶收藏的首选。</p>
+                        <div class="brand-features">
+                            <span class="feature-tag">普洱茶</span>
+                            <span class="feature-tag">历史悠久</span>
+                            <span class="feature-tag">收藏价值</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Brand 2 -->
+                <article class="brand-card">
+                    <img src="https://picsum.photos/seed/teabrand2/400/300" alt="八马茶业" class="brand-img">
+                    <div class="brand-info">
+                        <h3>八马茶业 <span class="brand-tag">铁观音</span></h3>
+                        <p>国家地理标志保护产品铁观音代表品牌，致力于铁观音的标准化与现代化，茶香高扬持久。</p>
+                        <div class="brand-features">
+                            <span class="feature-tag">铁观音</span>
+                            <span class="feature-tag">连锁经营</span>
+                            <span class="feature-tag">高端商务</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Brand 3 -->
+                <article class="brand-card">
+                    <img src="https://picsum.photos/seed/teabrand3/400/300" alt="吴裕泰" class="brand-img">
+                    <div class="brand-info">
+                        <h3>吴裕泰 <span class="brand-tag">茉莉花茶</span></h3>
+                        <p>北京老字号，以茉莉花茶制作技艺闻名，花香与茶香完美融合，深受北方茶客喜爱。</p>
+                        <div class="brand-features">
+                            <span class="feature-tag">茉莉花茶</span>
+                            <span class="feature-tag">老字号</span>
+                            <span class="feature-tag">北京特色</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Brand 4 -->
+                <article class="brand-card">
+                    <img src="https://picsum.photos/seed/teabrand4/400/300" alt="竹叶青" class="brand-img">
+                    <div class="brand-info">
+                        <h3>竹叶青 <span class="brand-tag">绿茶</span></h3>
+                        <p>峨眉山高山绿茶品牌，外形扁平光滑，色泽嫩绿，口感鲜爽回甘，定位高端礼品市场。</p>
+                        <div class="brand-features">
+                            <span class="feature-tag">绿茶</span>
+                            <span class="feature-tag">高山茶</span>
+                            <span class="feature-tag">礼品茶</span>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Buying Guide Section -->
+    <section id="guide" class="guide container">
+        <div class="guide-layout">
+            <div class="guide-article">
+                <h3>如何挑选正宗的中国茶叶品牌</h3>
+                <p>面对市场上琳琅满目的中国茶叶品牌，消费者往往难以抉择。以下是从产地、工艺、品牌信誉三个维度提供的实用选购建议：</p>
+                <ul class="guide-list">
+                    <li><strong>看产地：</strong> 中国茶叶讲究“名山名水”。如西湖龙井产自杭州西湖，普洱茶产自云南西双版纳。优先选择标注明确地理标志保护产品名称的品牌。</li>
+                    <li><strong>观外形：</strong> 绿茶条索紧结，红茶条索细嫩。注意干茶色泽是否自然，是否有杂质或异味。</li>
+                    <li><strong>闻香气：</strong> 真茶香气自然高雅，无刺鼻香精味。不同茶类香气各异，绿茶栗香/豆香，红茶花果香，乌龙茶兰花香。</li>
+                    <li><strong>辨品牌：</strong> 选择有正规生产资质、拥有实体工厂或茶园的品牌。查看品牌是否有相关的质量认证和荣誉证书。</li>
+                </ul>
+            </div>
+
+            <aside class="guide-sidebar">
+                <h4>常见问题解答</h4>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <span class="faq-question">新茶和老茶哪个更好？</span>
+                    <span class="faq-answer">这取决于个人口味。绿茶讲究鲜爽，通常新茶口感最佳；普洱茶具有越陈越香的特点，老茶口感醇厚，适合收藏和品饮。</span>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <span class="faq-question">如何判断茶叶是否变质？</span>
+                    <span class="faq-answer">如果茶叶出现陈味、霉味，或者泡出的茶汤颜色发暗浑浊，说明茶叶可能已经变质，不建议饮用。</span>
+                </div>
+                <div class="faq-item" onclick="toggleFaq(this)">
+                    <span class="faq-question">网购茶叶如何避坑？</span>
+                    <span class="faq-answer">尽量选择有品牌旗舰店的电商平台，查看买家评价中的实物图片，并索要质检报告。</span>
+                </div>
+            </aside>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <div class="footer-grid">
+            <div class="footer-col">
+                <h4>关于我们</h4>
+                <p style="font-size: 0.9rem; opacity: 0.8; line-height: 1.6;">
+                    中国茶叶品牌指南致力于为茶友提供最权威、最全面的茶叶品牌资讯与选购服务。我们深耕茶叶行业多年，只为还原一杯好茶的本真味道。
+                </p>
+            </div>
+            <div class="footer-col">
+                <h4>快速导航</h4>
+                <ul>
+                    <li><a href="#categories">茶叶分类</a></li>
+                    <li><a href="#brands">品牌推荐</a></li>
+                    <li><a href="#guide">选购攻略</a></li>
+                    <li><a href="#">联系客服</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>热门茶类</h4>
+                <ul>
+                    <li><a href="#">西湖龙井</a></li>
+                    <li><a href="#">武夷岩茶</a></li>
+                    <li><a href="#">安溪铁观音</a></li>
+                    <li><a href="#">祁门红茶</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>联系方式</h4>
+                <ul>
+                    <li>电话：400-123-4567</li>
+                    <li>邮箱：contact@teabrandguide.com</li>
+                    <li>地址：中国·杭州西湖区龙井路1号</li>
+                </ul>
+            </div>
+        </div>
+        <div class="copyright">
+            <p>&copy; 2023 中国茶叶品牌指南 版权所有</p>
+        </div>
+    </div>
+</footer>
+
+<script>
+    function toggleFaq(element) {
+        // 关闭其他所有已打开的FAQ
+        const allFaqs = document.querySelectorAll('.faq-item');
+        allFaqs.forEach(item => {
+            if (item !== element) {
+                item.classList.remove('active');
+            }
+        });
+        // 切换当前FAQ的显示状态
+        element.classList.toggle('active');
+    }
+</script>
+
+</body>
+</html>
